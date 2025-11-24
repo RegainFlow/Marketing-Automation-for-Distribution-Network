@@ -1,0 +1,5 @@
+{
+  "name": "AdvoCare Automation Dashboard",
+  "description": "A centralized dashboard for AdvoCare distributors to manage scraping, email automation, and social media content generation.",
+  "requestFramePermissions": []
+}
