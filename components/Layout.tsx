@@ -1,10 +1,10 @@
 import React from 'react';
 import { Outlet, NavLink, useLocation } from 'react-router-dom';
-import { 
-  PiHouseDuotone, 
-  PiRobotDuotone, 
-  PiEnvelopeDuotone, 
-  PiInstagramLogoDuotone, 
+import {
+  PiHouseDuotone,
+  PiRobotDuotone,
+  PiEnvelopeDuotone,
+  PiInstagramLogoDuotone,
   PiPackageDuotone,
   PiUserCircleDuotone,
   PiBellSimpleDuotone
@@ -14,7 +14,7 @@ const Layout: React.FC = () => {
   const location = useLocation();
 
   const getPageTitle = (path: string) => {
-    switch(path) {
+    switch (path) {
       case '/dashboard': return 'Dashboard';
       case '/scraping': return 'Data Scraper';
       case '/email': return 'Email Automation';
@@ -40,7 +40,7 @@ const Layout: React.FC = () => {
           <div className="font-logo font-bold text-xl tracking-wide flex items-center gap-2">
             <span className="text-primary text-2xl">⚡</span>
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-text-secondary">
-              RegainFlow
+              Marketing Automation
             </span>
           </div>
         </div>
@@ -52,8 +52,8 @@ const Layout: React.FC = () => {
               to={item.path}
               className={({ isActive }) => `
                 flex items-center gap-3 px-4 py-3 rounded-lg transition-all duration-200 group
-                ${isActive 
-                  ? 'bg-primary-alpha15 text-primary border border-primary-alpha25 shadow-glow' 
+                ${isActive
+                  ? 'bg-primary-alpha15 text-primary border border-primary-alpha25 shadow-glow'
                   : 'text-text-secondary hover:text-white hover:bg-[rgba(255,255,255,0.03)]'
                 }
               `}
@@ -94,7 +94,7 @@ const Layout: React.FC = () => {
           <h1 className="text-2xl font-bold text-white tracking-tight">
             {getPageTitle(location.pathname)}
           </h1>
-          
+
           <div className="flex items-center gap-4">
             <button className="p-2 rounded-full text-text-secondary hover:text-primary hover:bg-[rgba(255,255,255,0.05)] transition-colors relative">
               <PiBellSimpleDuotone size={24} />
